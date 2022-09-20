@@ -1,0 +1,34 @@
+version: '3.9'
+
+services:
+  db:
+    build:
+      context: ./docker/db
+      dockerfile: Dockerfile
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --skip-character-set-client-handshake
+    container_name: mysql
+    environment:
+      MYSQL_DATABASE: db
+      # MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+    volumes:
+      - type: volume
+        source: db
+        target: /var/lib/mysql
+      # - type: bind
+      #   source: ./docker/db/init.sql
+      #   target: /docker-entrypoint-initdb.d/init.sql   
+  
+  phpmyadmin:
+        container_name: phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        environment:
+            - PMA_ARBITRARY=1
+            - PMA_HOST=mysql
+            - PMA_USER=root
+            - PMA_PASSWORD=root
+        ports:
+            - 8080:80
+
+volumes:
+  db:
+    driver: local

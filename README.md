@@ -8,4 +8,4 @@ $ make docker-server
 $ make docker-mysql
 ```
 
-[localhost](http://localhost:8080/)
+Open [phpMyAdmin](http://localhost:8080) to view it in the browser.

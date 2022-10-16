@@ -5,7 +5,7 @@
 ```
 $ cd Learning-SQL
 $ make docker-server
-$ make docker-mysql
+$ make mysql
 ```
 
 Open [phpMyAdmin](http://localhost:8080) to view it in the browser.

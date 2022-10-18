@@ -1,6 +1,6 @@
 create table person
 (
-    person_id   smallint unsigned,
+    person_id   smallint unsigned auto_increment,
     fname       varchar(20),
     lname       varchar(20),
     eye_color   enum('BR','BL','GL'),

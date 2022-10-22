@@ -1,3 +1,5 @@
+![sakila](https://user-images.githubusercontent.com/80304118/197329585-753d89b9-00c1-490b-a8b0-165803382dcd.png)
+
 ```
 mysql> show tables;
 +----------------------------+

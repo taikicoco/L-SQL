@@ -1,9 +1,9 @@
 up:
 	docker-compose up -d
 bash:
-	docker exec -i -t mysql bash
+	docker exec -i -t l-mysql bash
 mysql:
-	docker exec -i -t mysql mysql -uroot -ppassword -Dsakila
+	docker exec -i -t l-mysql mysql -uroot -ppassword -Dsakila
 down:
 	docker-compose down
 	

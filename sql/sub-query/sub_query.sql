@@ -18,3 +18,4 @@ from customer as c
         group by customer_id
     ) as pymnt
     on c.customer_id = pymnt.customer_id;
+    

@@ -1,18 +1,15 @@
-up:
-	docker-compose up -d
+
 bash:
-	docker exec -i -t l-mysql bash
+	docker-compose -i -t l-mysql bash
 mysql:
-	docker exec -i -t l-mysql mysql -uroot -ppassword -Dsakila
+	docker exec -i -t l-mysql mysql -uroot -ppassword
+
+	
+up:
+	docker-compose up
+build:
+	docker-compose build
 down:
 	docker-compose down
-	
-docker-build:
-	docker-compose build
-docker-stop:
-	docker-compose stop
 docker-rm:
 	docker-compose rm
-
-docker-server: docker-build up
-docker-clean: docker-stop docker-rm
